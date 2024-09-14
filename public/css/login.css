@@ -24,7 +24,8 @@ form {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 500px; /* Aumentamos el max-width */
+  min-width: 320px; /* Aseguramos que el ancho mínimo sea adecuado para móviles */
   box-sizing: border-box;
 }
 
@@ -37,17 +38,19 @@ input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 1.1rem; /* Tamaño de texto más grande */
 }
 
 button {
   width: 100%;
   background-color: #4CAF50;
   color: white;
-  padding: 1rem;
+  padding: 1.25rem; /* Botones más grandes */
   margin: 0.5rem 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1.1rem; /* Tamaño de texto más grande */
 }
 
 button:hover {
@@ -64,6 +67,7 @@ div.actions a {
   text-decoration: none;
   color: #4CAF50;
   font-weight: bold;
+  font-size: 1.1rem; /* Tamaño del texto aumentado */
 }
 
 div.actions a:hover {
@@ -107,20 +111,20 @@ div.actions a:hover {
   cursor: pointer;
 }
 
-/* Estilo para dispositivos móviles como iPhone 12 y superiores, y Samsung */
-@media (max-width: 480px) {
+/* Estilo para móviles */
+@media (max-width: 600px) {
   form {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Más padding en móviles */
   }
 
   input[type="text"], input[type="password"] {
-    padding: 1.25rem; /* Más padding para hacer más grandes los inputs */
-    font-size: 1.1rem; /* Aumentar el tamaño del texto */
+    padding: 1.25rem; /* Inputs más grandes */
+    font-size: 1.2rem; /* Tamaño de texto mayor */
   }
 
   button {
     padding: 1.25rem; /* Botones más grandes */
-    font-size: 1.1rem; /* Tamaño de texto más grande */
+    font-size: 1.2rem; /* Tamaño de texto mayor */
   }
 
   h1 {
@@ -132,6 +136,6 @@ div.actions a:hover {
   }
 
   div.actions a {
-    font-size: 1.1rem; /* Aumentar tamaño del texto de "Crear cuenta" */
+    font-size: 1.2rem; /* Texto del enlace "Crear cuenta" más grande */
   }
 }
