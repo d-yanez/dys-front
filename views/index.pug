@@ -5,23 +5,36 @@ html(lang="es")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Página Principal
     link(rel="stylesheet" href="/css/styles.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
 
   body
     header
       h1 Sistema de Gestión
+      form.logout-form(action="/logout" method="POST")
+        button(type="submit") Cerrar sesión
 
     main
       .container
         .module
-          a(href="/orden-compra") Ingreso de Orden de Compra
+          a(href="/orden-compra")
+            i.fas.fa-shopping-cart
+            |  Ingreso de Orden de Compra
         .module
-          a(href="/tracking-casilla") Ingreso Tracking Casilla
+          a(href="/tracking-casilla")
+            i.fas.fa-box
+            |  Ingreso Tracking Casilla
         .module
-          a(href="/ingreso-internacional") Ingreso Internacional
+          a(href="/ingreso-internacional")
+            i.fas.fa-plane
+            |  Ingreso Internacional
         .module
-          a(href="/ingreso-inventario") Ingreso de Inventario
+          a(href="/ingreso-inventario")
+            i.fas.fa-warehouse
+            |  Ingreso de Inventario
         .module
-          a(href="/din-sii") Ingreso de DIN/SII
-          
+          a(href="/dte")
+            i.fas.fa-file-alt
+            |  Ingreso de DTE
+
     footer
       p &copy; 2024 Sistema de Gestión

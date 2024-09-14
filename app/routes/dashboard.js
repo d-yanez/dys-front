@@ -29,4 +29,10 @@ router.get('/dashboard', (req, res) => {
     
 });
 
+//cierre de sesión
+router.post('/logout', (req, res) => {
+    res.clearCookie('token'); // Elimina la cookie del token
+    res.redirect('/login'); // Redirige al login
+});
+
 module.exports = router
