@@ -107,17 +107,31 @@ div.actions a:hover {
   cursor: pointer;
 }
 
-/* Estilo para móviles */
-@media (max-width: 600px) {
+/* Estilo para dispositivos móviles como iPhone 12 y superiores, y Samsung */
+@media (max-width: 480px) {
   form {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
-  input[type="text"], input[type="password"], button {
-    padding: 0.75rem;
+  input[type="text"], input[type="password"] {
+    padding: 1.25rem; /* Más padding para hacer más grandes los inputs */
+    font-size: 1.1rem; /* Aumentar el tamaño del texto */
+  }
+
+  button {
+    padding: 1.25rem; /* Botones más grandes */
+    font-size: 1.1rem; /* Tamaño de texto más grande */
+  }
+
+  h1 {
+    font-size: 1.75rem; /* Título ligeramente más grande */
   }
 
   .modal-content {
     width: 90%;
+  }
+
+  div.actions a {
+    font-size: 1.1rem; /* Aumentar tamaño del texto de "Crear cuenta" */
   }
 }
