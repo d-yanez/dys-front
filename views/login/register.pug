@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Registro
+    link(rel="stylesheet" href="/css/login.css")
+  body
+    h1 Crear cuenta - Dyshopnow
+    form(action="/register" method="POST")
+      div
+        label Usuario:
+        input(type="text" name="username" required)
+      div
+        label Contraseña:
+        input(type="password" name="password" required)
+      div
+        button(type="submit") Registrar
+      div.actions
+        a(href="/login") Volver al login

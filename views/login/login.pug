@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title Login
+    link(rel="stylesheet" href="/css/login.css")
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+  body
+    h1 Login - Dyshopnow
+    form(action="/login" method="POST")
+      div
+        label Usuario:
+        input(type="text" name="username" required)
+      div
+        label Contraseña:
+        input(type="password" name="password" required)
+      div
+        button(type="submit") Iniciar sesión
+      if showRegisterButton
+        div.actions
+            a(href="/register") Crear cuenta
+
+    // Modal para el mensaje de error
+    div#myModal.modal
+      div.modal-content
+        span.close &times;
+        p Usuario o contraseña incorrectos
+
+    script.
+      // Script para mostrar el modal si hay un error
+      $(document).ready(function() {
+        if (!#{loginSuccess}) {
+          $('#myModal').show();
+        }
+
+        // Cerrar el modal al hacer clic en el botón "x"
+        $('.close').click(function() {
+          $('#myModal').hide();
+        });
+
+        // Cerrar el modal al hacer clic fuera del contenido
+        $(window).click(function(event) {
+          if (event.target.id === 'myModal') {
+            $('#myModal').hide();
+          }
+        });
+      })
